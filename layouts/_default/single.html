@@ -1,5 +1,6 @@
 {{ define "main" }}
 
+
 <article>
   <header class="mb-16">
     <h1 class="!my-0 pb-2.5">{{ .Title }}</h1>
@@ -30,6 +31,7 @@
     {{ end }}
   </footer>
   {{ end }}
+
 
   <!-- Post Nav -->
   {{ if not site.Params.disablePostNavigation }}<!---->
@@ -111,7 +113,9 @@
     data-loading="{{ site.Params.giscus.loading | default (print `lazy`) }}" crossorigin="anonymous" async></script>
   {{ end }}
 </article>
+
 <aside>
   {{ .TableOfContents }}
 </aside>
+
 {{ end }}

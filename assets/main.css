@@ -1942,10 +1942,11 @@ aside {
   margin-bottom: 0.6em;
   line-height: 1.6;
   text-decoration: none;
+  
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 1150px) {
 
   aside {
       max-height: 80px;
