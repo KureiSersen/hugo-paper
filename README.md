@@ -14,12 +14,8 @@ math = true
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    url = "/about/"
-    weight = 10
-  [[menu.main]]
-    identifier = "contact"
-    url = "/contact/"
+    identifier = "test"
+    url = "/test/"
     weight = 10
 
 [taxonomies]
