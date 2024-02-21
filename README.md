@@ -27,3 +27,13 @@ tag = "tags"
 [services]
   [services.disqus]
     shortname = 'https-kureisersen-github-io'
+
+
++++
+author = "Edwin.Liang"
+title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+date = {{ .Date }}
+draft = false
+comments = true
+tags = [""]
++++
