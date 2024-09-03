@@ -1,14 +1,14 @@
 <div align="center">
-<p><a href="https://kee.so/" target="_blank"><img src="https://i.imgur.com/x5SRUoo.png" alt="kee.so" /></a></p>
 
-Create now ➫ [🔗 kee.so](https://kee.so/)
+Link in bio to **widgets**,
+your online **home screen**. ➫ [kee.so](https://kee.so/)
 
 </div>
 
 ---
 
 <div align="center">
-<h1>Paper <sup><sup><sub>6.25</sub></sup></sup></h1>
+<h1>Paper <sup><sup><sub>6.27</sub></sup></sup></h1>
 
 Demo → [hugo-paper.vercel.app](https://hugo-paper.vercel.app/)
 
@@ -28,7 +28,6 @@ Hugo themes: [themes.gohugo.io/hugo-paper](https://themes.gohugo.io/hugo-paper/)
 
 ![](./images/screenshot.png)
 ![](./images/screenshot_dark.png)
-![](./images/screenshot_mobile.png)
 ![](./images/pagespeed.png)
 
 ## Options
@@ -36,7 +35,9 @@ Hugo themes: [themes.gohugo.io/hugo-paper](https://themes.gohugo.io/hugo-paper/)
 Available options to `config.toml` or `hugo.toml`:
 
 ```toml
-disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # use disqus comments
+[services]
+  [services.disqus]
+    shortname = 'YOUR_DISQUS_SHORTNAME'     # use disqus comments
 
 [params]
   # color style
@@ -48,6 +49,7 @@ disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # use disqus comments
   instagram = 'YOUR_INSTAGRAM_ID'           # instagram.com/YOUR_INSTAGRAM_ID
   linkedin = 'YOUR_LINKEDIN_ID'             # linkedin.com/in/YOUR_LINKEDIN_ID
   mastodon = 'YOUR_MASTODON_LINK'           # e.g. 'https://mastodon.instance/@xxx'
+  threads = '@YOUR_THREADS_ID'              # threads.net/@YOUR_THREADS_ID
   rss = true                                # show rss icon
 
   # home page profile
@@ -62,7 +64,13 @@ disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # use disqus comments
   monoDarkIcon = true                       # show monochrome dark mode icon
   gravatarCdn = 'GRAVATAR_CDN_LINK'         # e.g. 'https://cdn.v2ex.com/gravatar/'
   math = true                               # enable KaTeX math typesetting globally
+  localKatex = false                        # use local KaTeX js/css instead of CDN
   graphCommentId = "YOUR_GRAPH_COMMENT_ID"  # use graph comment (disqus alternative)
+  favicon = "favicon.ico"                   # customize the default favicon
+  appleTouchIcon = "apple-touch-icon.png"   # customize the default Apple touch icon
+
+  # RTL supprot
+  direction = "rtl"                         # RTL support for Right-to-left languages
 
   # giscus
 [params.giscus]
@@ -105,7 +113,7 @@ For more information, please read the [official guide](https://gohugo.io/getting
 Add paper theme ad dependency of your site:
 
 ```bash
-hugo mod init github.com/nanxiaobei/hugo-paper
+hugo mod init github.com/<your_user>/<your_project>
 ```
 
 Open `config.toml`(or `hugo.toml`), remove the `theme` line (if present), add `module` section to the bottom of the file:
